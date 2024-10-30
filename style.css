@@ -1,36 +1,52 @@
 .font-for-all {
-    color: #333;
-    font-family: Helvetica, Arial, sans-serif;
-    font-style: inherit;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: inherit;
 }
 
 .position {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .fname-sname {
-    font-style: oblique;
+  font-style: oblique;
 }
 
 th {
-    text-transform: uppercase;
+  text-transform: uppercase;
+  text-align: left;
+  background-color: #d3d1d1;
+}
+
+td {
+  background-color: #e6d1d1;
 }
 
 a {
-    color: #00f;
-    text-decoration: underline;
+  color: #00f;
+  text-decoration: underline;
 }
 
 a:visited {
-    color: #005;
-    text-decoration: underline;
+  color: #005;
+  text-decoration: underline;
 }
 
 a:hover {
-    color: #005;
-    text-decoration: none;
+  color: #005;
+  text-decoration: none;
 }
 
 ul {
-    list-style-type: square;
+  list-style-type: square;
+}
+
+.bottom-line {
+  border-style: none none groove none;
+  border-width: 1px;
+  border-color: #a5a5a5;
+}
+.profile-photo {
+  border: 2px solid #a5a5a5;
+  padding: 10px;
 }
