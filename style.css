@@ -1,0 +1,36 @@
+.font-for-all {
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: inherit;
+}
+
+.position {
+    font-weight: bolder;
+}
+
+.fname-sname {
+    font-style: oblique;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+a {
+    color: #00f;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #005;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #005;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: square;
+}
