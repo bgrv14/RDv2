@@ -1,69 +1,101 @@
-.font-for-all {
+html {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.wrapper {
+  font-family: Arial, Helvetica, sans-serif;
   color: #333;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: inherit;
 }
 
-.position {
-  font-weight: bolder;
+.profilephoto {
+  width: 100px;
+  border: 1px solid #9b9595;
+  padding: 10px 10px 10px 10px;
+  float: right;
 }
 
-.fname-sname {
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head h1 {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: rgb(160, 157, 157);
+  display: flex;
+}
+
+.pib {
   font-style: oblique;
 }
 
-th {
-  text-transform: uppercase;
-  text-align: left;
-  background-color: #d3d1d1;
+.posada {
+  font-size: x-large;
+  font-weight: bolder;
 }
 
-td {
-  background-color: #e6d1d1;
+.zagolovki {
+  font-variant: small-caps;
+  font-weight: bolder;
+  font-size: large;
+  background-color: rgb(149, 212, 241);
 }
 
-h1 {
-  margin-bottom: 0;
+.skills {
+  list-style-type: square;
+  list-style-position: outside;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: rgb(160, 157, 157);
 }
 
-h2 {
-  margin-bottom: 0;
+.achivments {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: rgb(160, 157, 157);
 }
 
-h3 {
-  margin-bottom: 0;
-}
-
-a {
+.wrapper a {
   color: #00f;
   text-decoration: underline;
 }
 
-a:visited {
+.wrapper a:visited {
   color: #005;
   text-decoration: underline;
 }
 
-a:hover {
-  color: #005;
+.wrapper a:hover {
   text-decoration: none;
 }
 
-ul {
-  list-style-type: square;
-  margin-bottom: 0;
+.table {
+  background-color: rgb(220, 220, 223);
+  width: 100%;
 }
 
-ol {
-  margin-bottom: 0;
+.table th:first-child {
+  width: 20%;
 }
 
-.bottom-line {
-  border-style: none none groove none;
-  border-width: 1px;
-  border-color: #a5a5a5;
+td {
+  padding: 5px;
 }
-.profile-photo {
-  border: 2px solid #a5a5a5;
-  padding: 10px;
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
