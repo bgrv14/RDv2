@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: azure;
   display: flex;
   justify-content: center;
   height: 100%;
@@ -36,7 +36,7 @@ body {
 }
 
 .full .LeftSide .name {
-  color: #ffffff;
+  color: #f0f8ff;
   padding-top: 58px;
   padding-left: 40px;
   font-weight: 600;
