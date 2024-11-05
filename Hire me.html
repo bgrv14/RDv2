@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hire me</title>
+    <link rel="stylesheet" href="styleHM.css" />
+  </head>
+  <body>
+    <h2>Контактна інформація</h2>
+    <div class="contacts">
+      <div class="phoneHead">Мобільний телефон</div>
+      <div class="phoneNumber">+380676338323</div>
+      <div class="addressHead">Адреса</div>
+      <div class="address">м. Кривий Ріг</div>
+    </div>
+    <br />
+    <fieldset>
+      <form class="fullForm">
+        <div class="form">
+          <div><legend>Контактна форма</legend></div>
+          <div>
+            <label for="email">E-Mail:<span style="color: red">*</span></label>
+          </div>
+          <div>
+            <input
+              required
+              id="email"
+              type="email"
+              name="email"
+              placeholder="example@e-mail.com"
+            />
+          </div>
+          <div>
+            <label for="description">Опис:</label>
+          </div>
+          <div>
+            <textarea
+              id="description"
+              name="desription"
+              rows="5"
+              cols="22"
+              minlength="10"
+              maxlength="220"
+              placeholder="Введіть текст"
+            >
+            </textarea>
+          </div>
+          <div>
+            <label>Тип роботи:</label>
+          </div>
+          <div>
+            <select name="worktype">
+              Тип роботи: >
+              <option value="Type1">Робота в офісі</option>
+              <option value="Type2">Віддалена робота</option>
+              <option value="Type3">Разовий проєкт</option>
+            </select>
+          </div>
+          <div>
+            <input type="submit" value="Найняти мене" />
+          </div>
+        </div>
+      </form>
+    </fieldset>
+  </body>
+</html>

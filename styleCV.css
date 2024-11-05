@@ -1,0 +1,180 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  zoom: 95%;
+}
+
+.full {
+  position: relative;
+  width: 1200px;
+  min-height: 1000px;
+  display: grid;
+  grid-template-columns: 385px 815px;
+  color: #263036;
+}
+
+.full .LeftSide {
+  position: relative;
+  background: #86a3b4;
+  margin: 0;
+}
+
+.full .LeftSide .profilephoto {
+  position: relative;
+  width: 385px;
+  padding-bottom: 50px;
+}
+
+.full .LeftSide .name {
+  color: #ffffff;
+  padding-top: 58px;
+  padding-left: 40px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.full .LeftSide .lastName {
+  width: 260px;
+  height: 48px;
+  color: #1c2e8c;
+  padding-left: 40px;
+  padding-bottom: 36px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.full .LeftSide .contact {
+  position: relative;
+  padding-bottom: 36px;
+  padding-left: 40px;
+}
+
+.full .LeftSide .contact h1 {
+  border-bottom-style: solid;
+  border-bottom-width: 6px;
+  border-color: #1e1e1e;
+  margin: 0;
+  padding-bottom: 13px;
+  font-weight: 600;
+  font-size: 32px;
+  width: 289px;
+}
+
+.full .LeftSide .contact h2 {
+  margin: 0 0 9px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.full .LeftSide .contact p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.full .LeftSide .address {
+  padding-bottom: 31px;
+  margin-top: 31px;
+  line-height: 10px;
+}
+
+.full .LeftSide .phone {
+  padding-bottom: 36px;
+}
+
+.full .LeftSide .email {
+  padding-bottom: 36px;
+}
+
+.full .LeftSide .linkedin {
+  padding-bottom: 36px;
+}
+
+.full .LeftSide .languages {
+  padding-bottom: 36px;
+}
+
+.full .LeftSide .languages h1 {
+  margin-bottom: 36px;
+}
+
+.full .LeftSide .languages p {
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.full a {
+  color: #1c2e8c;
+  text-decoration: none;
+}
+
+.full a:visited {
+  color: #005;
+}
+
+.full .RightSide {
+  position: relative;
+  padding: 58px 54px 0px 45px;
+  color: #263036;
+  margin: 0;
+}
+
+.full .RightSide p {
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0;
+}
+
+.full .RightSide .summary {
+  padding-bottom: 36px;
+}
+
+.full .RightSide .summary p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.full .RightSide .skills .table ul {
+  margin: 0;
+  display: grid;
+}
+
+.full .RightSide .skills {
+  padding-bottom: 49px;
+}
+
+.full .RightSide .experience {
+  padding-bottom: 49px;
+}
+
+.full .RightSide .experience {
+  padding-bottom: 49px;
+}
+.full .RightSide h1 {
+  border-bottom-style: solid;
+  border-bottom-width: 6px;
+  border-color: #1e1e1e;
+  margin: 0;
+  margin-bottom: 28px;
+  padding-bottom: 13px;
+  font-weight: 600;
+  font-size: 32px;
+  width: 659px;
+}

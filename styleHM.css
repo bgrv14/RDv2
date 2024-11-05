@@ -1,0 +1,174 @@
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  color: #3b4256;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+body h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts {
+  grid-template-columns: max-content min-content;
+  grid-template-rows: auto;
+  display: grid;
+  justify-content: center;
+}
+
+body .contacts .phoneHead {
+  border: solid 2px;
+  border-right: 0;
+  border-bottom: 0;
+  border-color: #3b4256;
+  border-radius: 16px 0 0 0;
+  padding: 3px;
+  font-weight: bold;
+}
+
+body .contacts .phoneNumber {
+  border: 2px solid #3b4256;
+  border-radius: 0 16px 0 0;
+  border-bottom: 0;
+  padding: 2px;
+}
+
+body .contacts .addressHead {
+  border: 2px solid #3b4256;
+  border-right: 0;
+  border-radius: 0 0 0 16px;
+  padding: 3px;
+  font-weight: bold;
+}
+
+body .contacts .address {
+  border: 2px solid #3b4256;
+  border-radius: 0 0 16px 0;
+  padding: 2px;
+}
+
+.fullForm {
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+body fieldset .form {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #3b4256;
+  font-weight: 500;
+  font-size: 20px;
+
+  margin-right: 0;
+}
+
+body fieldset div {
+  padding: 7px 0px 15px 0px;
+  margin-right: 0;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+input[type="email"] {
+  border-radius: 16px;
+  border: 0 solid;
+  font-style: normal;
+  font-size: 15px;
+  padding-left: 10px;
+  width: 250px;
+  height: 25px;
+  background: #f8fafc;
+  border-radius: 4px;
+}
+
+body fieldset form label span {
+  color: #be0000;
+  font-size: 20px;
+}
+
+body fieldset legend {
+  color: #3b4256;
+  font-weight: 600;
+  font-size: 26px;
+  margin: 0;
+}
+
+body fieldset form textarea {
+  color: #3b4256;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  padding: 5px 0 0 5px;
+  background: #f8fafc;
+  border: 0px solid;
+  border-radius: 16px;
+  width: 250px;
+  height: 200px;
+  min-width: 250px;
+  max-width: 350px;
+  min-height: 200px;
+  max-height: 250px;
+}
+
+body fieldset {
+  border: 2px solid #3b4256;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+
+  width: 1024px;
+}
+
+body fieldset form select {
+  border-radius: 16px;
+  border: 0 solid;
+  font-size: 15px;
+  display: flex;
+  cursor: pointer;
+  padding-left: 5px;
+  width: 250px;
+  height: 25px;
+  border-radius: 4px;
+  appearance: none;
+  background: url("./arrow_down.png") no-repeat center right 0px #f8fafc;
+}
+
+body fieldset form input[type="submit"] {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100px;
+  height: 48px;
+  left: 16px;
+  top: 72px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #0048d9;
+  border-radius: 6px;
+  border: 0;
+  color: azure;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 1px solid #0048d9;
+}
