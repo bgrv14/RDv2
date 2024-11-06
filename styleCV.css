@@ -4,27 +4,33 @@ html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
+  height: 100%;
+  position: relative;
 }
 
 body {
   background-color: azure;
-  display: flex;
-  justify-content: center;
   height: 100%;
   zoom: 95%;
 }
 
 .full {
-  position: relative;
+  position: absolute;
+  top: calc(50% - 500px);
+  left: calc(50% - 600px);
   width: 1200px;
   min-height: 1000px;
   display: grid;
   grid-template-columns: 385px 815px;
+  grid-template-rows: 1667px 1667px;
   color: #263036;
 }
 
+/*======= Left Side =======*/
+
 .full .LeftSide {
-  position: relative;
+  position: fixed;
+  transform: scale(0.8) translate(10%, -10%);
   background: #86a3b4;
   margin: 0;
 }
@@ -127,8 +133,11 @@ body {
   color: #005;
 }
 
+/* =======Right Side========*/
+
 .full .RightSide {
-  position: relative;
+  position: absolute;
+  left: 33%;
   padding: 58px 54px 0px 45px;
   color: #263036;
   margin: 0;
