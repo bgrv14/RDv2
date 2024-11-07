@@ -10,6 +10,7 @@
   --font-size-small: 16px;
   --font-size-name-lastname: 40px;
   --font-style-links: italic;
+
   --font-family-base: Trebuchet MS, sans-serif;
 }
 
@@ -17,54 +18,52 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-family-base);
-  font-style: normal;
   height: 100%;
   position: relative;
 }
 
-html:has(.main-theme) {
-  background-color: #eeeeee;
+html:has(.my-theme) {
+  background-color: #978897;
 }
 
-.main-theme {
+.my-theme {
   position: absolute;
   top: calc(50% - 500px);
   left: calc(50% - 600px);
   display: grid;
   grid-template-columns: 385px 815px;
   grid-template-rows: 1667px max-content;
-  color: var(--color-main-text);
+  color: var(--color-main-text-nt);
 
   /* colors */
-  --color-ls-background: #86a3b4;
-  --color-underline: #1e1e1e;
-  --color-main-text: #263036;
-  --color-main-name: #ffffff;
-  --color-main-lastname: #1c2e8c;
-  --color-main-links: #1c2e8c;
-  --color-main-visitedLinks: #005;
-  --color-rs-background: #eeeeee;
+  --color-ls-background-nt: #2c2c34;
+  --color-rs-background-nt: #978897;
+  --color-underline-nt: #494850;
+  --color-main-text-nt: #d8d8f6;
+  --color-main-name-nt: #d8d8f6;
+  --color-main-lastname-nt: #6184d8;
+  --color-main-links-nt: #1b98e0;
+  --color-main-visitedLinks-nt: #006494;
 }
 
 /*======= Left Side =======*/
 
-.main-theme .LeftSide {
+.my-theme .LeftSide {
   position: fixed;
   transform: scale(0.8) translate(12.1%, -12%);
-  background: var(--color-ls-background);
+  background: var(--color-ls-background-nt);
   margin: 0;
 }
 
-.main-theme .LeftSide .profilephoto {
+.my-theme .LeftSide .profilephoto {
   position: relative;
   width: 385px;
   object-fit: contain;
   padding-bottom: 50px;
 }
 
-.main-theme .LeftSide .name {
-  color: var(--color-main-name);
+.my-theme .LeftSide .name {
+  color: var(--color-main-name-nt);
   padding-top: 58px;
   padding-left: var(--padding-left);
   font-weight: 600;
@@ -72,10 +71,10 @@ html:has(.main-theme) {
   line-height: 48px;
 }
 
-.main-theme .LeftSide .lastName {
+.my-theme .LeftSide .lastName {
   width: 260px;
   height: 48px;
-  color: var(--color-main-lastname);
+  color: var(--color-main-lastname-nt);
   padding-left: var(--padding-left);
   padding-bottom: var(--padding-bottom-big);
   font-weight: 600;
@@ -83,16 +82,16 @@ html:has(.main-theme) {
   line-height: 48px;
 }
 
-.main-theme .LeftSide .contact {
+.my-theme .LeftSide .contact {
   position: relative;
   padding-bottom: var(--padding-bottom-big);
   padding-left: var(--padding-left);
 }
 
-.main-theme .LeftSide .contact h1 {
+.my-theme .LeftSide .contact h1 {
   border-bottom-style: solid;
   border-bottom-width: 6px;
-  border-color: var(--color-underline);
+  border-color: var(--color-underline-nt);
   margin: 0;
   padding-bottom: var(--padding-bottom-small);
   font-weight: 600;
@@ -100,63 +99,63 @@ html:has(.main-theme) {
   width: 289px;
 }
 
-.main-theme .LeftSide .contact h2 {
+.my-theme .LeftSide .contact h2 {
   margin: 0;
   font-weight: 600;
   font-size: var(--font-size-large);
   line-height: 29px;
 }
 
-.main-theme .LeftSide .contact p {
+.my-theme .LeftSide .contact p {
   margin: 0;
   font-weight: 600;
   font-size: var(--font-size-small);
   line-height: 19px;
 }
 
-.main-theme .LeftSide .address {
+.my-theme .LeftSide .address {
   padding-bottom: var(--padding-bottom-big);
   margin-top: 31px;
   line-height: 10px;
 }
 
-.main-theme .LeftSide .phone {
+.my-theme .LeftSide .phone {
   padding-bottom: var(--padding-bottom-big);
 }
 
-.main-theme .LeftSide .email {
+.my-theme .LeftSide .email {
   padding-bottom: var(--padding-bottom-big);
 }
 
-.main-theme .LeftSide .linkedin {
+.my-theme .LeftSide .linkedin {
   padding-bottom: var(--padding-bottom-big);
 }
 
-.main-theme .LeftSide .languages {
+.my-theme .LeftSide .languages {
   padding-bottom: var(--padding-bottom-big);
 }
 
-.main-theme .LeftSide .languages h1 {
+.my-theme .LeftSide .languages h1 {
   margin-bottom: var(--padding-bottom-big);
 }
 
-.main-theme .LeftSide .languages p {
+.my-theme .LeftSide .languages p {
   font-weight: 600;
   font-size: 20px;
   padding-bottom: var(--padding-bottom-small);
 }
 
-.main-theme a {
-  color: var(--color-main-links);
+.my-theme a {
+  color: var(--color-main-links-nt);
   text-decoration: none;
   font-style: var(--font-style-links);
 }
 
-.main-theme a:visited {
-  color: var(--color-main-visitedLinks);
+.my-theme a:visited {
+  color: var(--color-main-visitedLinks-nt);
 }
 
-.main-theme a:hover {
+.my-theme a:hover {
   font-style: var(--font-style-links);
   font-weight: 700;
   text-decoration: underline;
@@ -164,41 +163,42 @@ html:has(.main-theme) {
 
 /* =======Right Side========*/
 
-.main-theme .RightSide {
+.my-theme .RightSide {
   position: absolute;
   left: 32%;
   padding: 58px 54px 0px 45px;
-  color: var(--color-main-text);
-  background-color: var(--color-rs-background);
+  color: var(--color-main-text-nt);
+  background-color: var(--color-rs-background-nt);
+  text-shadow: 1px 1px 1px #000000;
 }
 
-.main-theme .RightSide div {
+.my-theme .RightSide div {
   padding-bottom: var(--padding-bottom-big);
 }
 
-.main-theme .RightSide p {
+.my-theme .RightSide p {
   font-size: var(--font-size-small);
   line-height: 19px;
   margin: 0;
 }
 
-.main-theme .RightSide .summary p {
+.my-theme .RightSide .summary p {
   margin: 0;
   font-weight: 600;
   font-size: var(--font-size-small);
   line-height: 19px;
 }
 
-.main-theme .RightSide .skills .table ul {
+.my-theme .RightSide .skills .table ul {
   margin: 0;
   display: grid;
   font-size: var(--font-size-small);
 }
 
-.main-theme .RightSide h1 {
+.my-theme .RightSide h1 {
   border-bottom-style: solid;
   border-bottom-width: 6px;
-  border-color: var(--color-underline);
+  border-color: var(--color-underline-nt);
   margin: 0;
   margin-bottom: 28px;
   padding-bottom: var(--padding-bottom-small);
