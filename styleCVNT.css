@@ -18,6 +18,8 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-family-base);
+  font-style: normal;
   height: 100%;
   position: relative;
 }
@@ -27,13 +29,10 @@ html:has(.my-theme) {
 }
 
 .my-theme {
-  position: absolute;
-  top: calc(50% - 500px);
-  left: calc(50% - 600px);
-  display: grid;
-  grid-template-columns: 385px 815px;
-  grid-template-rows: 1667px max-content;
-  color: var(--color-main-text-nt);
+  color: var(--color-main-text);
+  background-color: var(--color-full-background);
+  margin: 0;
+  min-height: 100vh;
 
   /* colors */
   --color-ls-background-nt: #2c2c34;
@@ -45,19 +44,32 @@ html:has(.my-theme) {
   --color-main-links-nt: #1b98e0;
   --color-main-visitedLinks-nt: #006494;
 }
+.full {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 40vh 42vw;
+  grid-template-rows: 174vh;
+  grid-template-areas: "LeftSide RightSide";
+  justify-content: center;
+}
 
 /*======= Left Side =======*/
 
 .my-theme .LeftSide {
-  position: fixed;
-  transform: scale(0.8) translate(12.1%, -12%);
   background: var(--color-ls-background-nt);
   margin: 0;
+  grid-area: LeftSide;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-theme .LeftSide div {
+  padding-bottom: var(--padding-bottom-big);
 }
 
 .my-theme .LeftSide .profilephoto {
-  position: relative;
   width: 385px;
+  height: 292px;
   object-fit: contain;
   padding-bottom: 50px;
 }
@@ -65,6 +77,7 @@ html:has(.my-theme) {
 .my-theme .LeftSide .name {
   color: var(--color-main-name-nt);
   padding-top: 58px;
+  padding-bottom: 0%;
   padding-left: var(--padding-left);
   font-weight: 600;
   font-size: var(--font-size-name-lastname);
@@ -76,15 +89,12 @@ html:has(.my-theme) {
   height: 48px;
   color: var(--color-main-lastname-nt);
   padding-left: var(--padding-left);
-  padding-bottom: var(--padding-bottom-big);
   font-weight: 600;
   font-size: var(--font-size-name-lastname);
   line-height: 48px;
 }
 
 .my-theme .LeftSide .contact {
-  position: relative;
-  padding-bottom: var(--padding-bottom-big);
   padding-left: var(--padding-left);
 }
 
@@ -100,7 +110,7 @@ html:has(.my-theme) {
 }
 
 .my-theme .LeftSide .contact h2 {
-  margin: 0;
+  margin: 0 0 9px;
   font-weight: 600;
   font-size: var(--font-size-large);
   line-height: 29px;
@@ -114,25 +124,8 @@ html:has(.my-theme) {
 }
 
 .my-theme .LeftSide .address {
-  padding-bottom: var(--padding-bottom-big);
   margin-top: 31px;
   line-height: 10px;
-}
-
-.my-theme .LeftSide .phone {
-  padding-bottom: var(--padding-bottom-big);
-}
-
-.my-theme .LeftSide .email {
-  padding-bottom: var(--padding-bottom-big);
-}
-
-.my-theme .LeftSide .linkedin {
-  padding-bottom: var(--padding-bottom-big);
-}
-
-.my-theme .LeftSide .languages {
-  padding-bottom: var(--padding-bottom-big);
 }
 
 .my-theme .LeftSide .languages h1 {
@@ -164,12 +157,15 @@ html:has(.my-theme) {
 /* =======Right Side========*/
 
 .my-theme .RightSide {
-  position: absolute;
-  left: 32%;
+  left: 0%;
   padding: 58px 54px 0px 45px;
   color: var(--color-main-text-nt);
+  margin: 0;
   background-color: var(--color-rs-background-nt);
   text-shadow: 1px 1px 1px #000000;
+  grid-area: RightSide;
+  display: flex;
+  flex-direction: column;
 }
 
 .my-theme .RightSide div {
@@ -204,5 +200,15 @@ html:has(.my-theme) {
   padding-bottom: var(--padding-bottom-small);
   font-weight: 600;
   font-size: var(--font-size-xlarge);
-  width: 659px;
+}
+
+@media screen and (max-width: 382px) {
+  .full {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas:
+      "LeftSide"
+      "RightSide";
+    justify-content: left;
+  }
 }
