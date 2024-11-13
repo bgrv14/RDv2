@@ -7,12 +7,22 @@ html {
   color: #3b4256;
   font-weight: 500;
   font-size: 15px;
-  /*
-  display: flex;
-  justify-content: center;
-  zoom: 95%;
-  */
   position: relative;
+  animation-name: fullform;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  background-color: #eeeeee;
+}
+
+@keyframes fullform {
+  0% {
+    opacity: 0%;
+    scale: 200%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
 
 body {

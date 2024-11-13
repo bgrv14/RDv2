@@ -38,7 +38,7 @@ html:has(.my-theme) {
   --color-ls-background-nt: #2c2c34;
   --color-rs-background-nt: #978897;
   --color-underline-nt: #494850;
-  --color-main-text-nt: #d8d8f6;
+  --color-main-text-nt: #f5f5fa;
   --color-main-name-nt: #d8d8f6;
   --color-main-lastname-nt: #6184d8;
   --color-main-links-nt: #1b98e0;
@@ -63,6 +63,21 @@ html:has(.my-theme) {
   flex-direction: column;
   box-shadow: 5px 5px 10px 5px rgb(78, 74, 74);
   position: relative;
+  z-index: 1;
+  animation-name: leftsidebar;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+
+@keyframes leftsidebar {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+  100% {
+    top: 0%;
+    opacity: 1;
+  }
 }
 
 .my-theme .LeftSide div {
@@ -74,6 +89,7 @@ html:has(.my-theme) {
   height: 292px;
   object-fit: contain;
   padding-bottom: 50px;
+  transition: all 0.2s ease-in 0s;
 }
 
 .my-theme .LeftSide .profilephoto:hover {
@@ -176,6 +192,25 @@ html:has(.my-theme) {
   grid-area: RightSide;
   display: flex;
   flex-direction: column;
+  position: relative;
+  opacity: 0;
+  animation-name: rightsidebar;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rightsidebar {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0%;
+    opacity: 100%;
+  }
 }
 
 .my-theme .RightSide div {
@@ -214,6 +249,7 @@ html:has(.my-theme) {
 
 .my-theme .RightSide .we1 {
   opacity: 70%;
+  transition: opacity 0.5s;
 }
 
 .my-theme .RightSide .we1:hover {
@@ -222,6 +258,7 @@ html:has(.my-theme) {
 
 .my-theme .RightSide .we2 {
   opacity: 70%;
+  transition: opacity 0.5s;
 }
 
 .my-theme .RightSide .we2:hover {
@@ -230,6 +267,7 @@ html:has(.my-theme) {
 
 .my-theme .RightSide .we3 {
   opacity: 70%;
+  transition: opacity 0.5s;
 }
 
 .my-theme .RightSide .we3:hover {
