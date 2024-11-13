@@ -61,6 +61,8 @@ html:has(.my-theme) {
   grid-area: LeftSide;
   display: flex;
   flex-direction: column;
+  box-shadow: 5px 5px 10px 5px rgb(78, 74, 74);
+  position: relative;
 }
 
 .my-theme .LeftSide div {
@@ -68,10 +70,17 @@ html:has(.my-theme) {
 }
 
 .my-theme .LeftSide .profilephoto {
-  width: 385px;
+  width: 381px;
   height: 292px;
   object-fit: contain;
   padding-bottom: 50px;
+}
+
+.my-theme .LeftSide .profilephoto:hover {
+  width: 672px;
+  height: 510px;
+  padding-bottom: 0;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.8);
 }
 
 .my-theme .LeftSide .name {
@@ -96,6 +105,7 @@ html:has(.my-theme) {
 
 .my-theme .LeftSide .contact {
   padding-left: var(--padding-left);
+  color: var(--color-main-text-nt);
 }
 
 .my-theme .LeftSide .contact h1 {
@@ -202,6 +212,30 @@ html:has(.my-theme) {
   font-size: var(--font-size-xlarge);
 }
 
+.my-theme .RightSide .we1 {
+  opacity: 70%;
+}
+
+.my-theme .RightSide .we1:hover {
+  opacity: 100%;
+}
+
+.my-theme .RightSide .we2 {
+  opacity: 70%;
+}
+
+.my-theme .RightSide .we2:hover {
+  opacity: 100%;
+}
+
+.my-theme .RightSide .we3 {
+  opacity: 70%;
+}
+
+.my-theme .RightSide .we3:hover {
+  opacity: 100%;
+}
+
 @media screen and (max-width: 382px) {
   .full {
     grid-template-columns: 1fr;
@@ -210,5 +244,13 @@ html:has(.my-theme) {
       "LeftSide"
       "RightSide";
     justify-content: left;
+  }
+  .my-theme .LeftSide .profilephoto:hover {
+    width: 385px;
+    height: 292px;
+    object-fit: contain;
+    padding-bottom: 50px;
+    box-shadow: 0px 0px 0px 0px;
+    animation: none;
   }
 }
