@@ -1,0 +1,328 @@
+@use "my-theme" as my;
+@use "main-theme" as main;
+
+:root {
+    --padding-bottom-big: 36px;
+    --padding-bottom-small: 13px;
+    --padding-left: 40px;
+
+    /* font */
+    --font-size-xlarge: 32px;
+    --font-size-large: 24px;
+    --font-size-small: 16px;
+    --font-size-name-lastname: 40px;
+    --font-style-links: italic;
+
+    --font-family-base: Trebuchet MS, sans-serif;
+}
+
+@mixin SideAnimation {
+    animation-duration: 1s;
+
+    @keyframes sidebar {
+        0% {
+            top: 50%;
+            opacity: 0;
+        }
+
+        100% {
+            top: 0%;
+            opacity: 1;
+        }
+    }
+}
+
+@mixin Theme($name,
+    $ls-background,
+    $rs-background,
+    $full-background,
+    $underline,
+    $main-text,
+    $main-name,
+    $main-lastname,
+    $main-links,
+    $main-visitedLinks,
+    $background-color) {
+    .#{$name}-theme {
+        margin: 0;
+        color: $main-text;
+        background-color: $background-color;
+
+        .full {
+            display: grid;
+            height: 100vh;
+        grid-template-columns: 40vh 42vw;
+            grid-template-rows: 174vh;
+            grid-template-areas: "LeftSide RightSide";
+            justify-content: center;
+
+            @media screen and (max-width: 382px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: 2fr 2fr;
+                grid-template-areas:
+                    "LeftSide"
+                    "RightSide";
+                justify-content: left;
+            }
+
+            /*======= Left Side =======*/
+
+            .LeftSide {
+                background-color: $ls-background;
+                margin: 0;
+                grid-area: LeftSide;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 5px 5px 10px 5px rgb(78, 74, 74);
+                position: relative;
+                z-index: 1;
+                animation-name: sidebar;
+                animation-timing-function: linear;
+                @include SideAnimation();
+
+                div {
+                    padding-bottom: var(--padding-bottom-big);
+                }
+
+                .profilephoto {
+                    width: 381px;
+                    height: 292px;
+                    object-fit: contain;
+                    padding-bottom: 50px;                    
+                    transition: all 0.2s ease-in 0s;
+
+                    &:hover {
+                        width: 672px;
+                        height: 510px;
+                        padding-bottom: 0;
+                        box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.8);
+                        
+
+                        @media screen and (max-width: 382px) {
+                            width: 385px;
+                            height: 292px;
+                            object-fit: contain;
+                            padding-bottom: 50px;
+                            box-shadow: 0px 0px 0px 0px;
+                            animation: none;
+                        }
+
+                        @keyframes profilefoto {
+                            0% {
+                                width: 385px;
+                                height: 292px;
+                            }
+
+                            100% {
+                                width: 672px;
+                                height: 510px;
+                            }
+                        }
+                    }
+                }
+
+                .name {
+                    color: $main-name;
+                    padding-top: 58px;
+                    padding-bottom: 0%;
+                    padding-left: var(--padding-left);
+                    font-weight: 600;
+                    font-size: var(--font-size-name-lastname);
+                    line-height: 48px;
+                }
+
+                .lastName {
+                    width: 260px;
+                    height: 48px;
+                    color: $main-lastname;
+                    padding-left: var(--padding-left);
+                    padding-bottom: var(--padding-bottom-big);
+                    font-weight: 600;
+                    font-size: var(--font-size-name-lastname);
+                    line-height: 48px;
+                }
+
+                .contact {
+                    padding-left: var(--padding-left);
+
+                    h1 {
+                        border-bottom-style: solid;
+                        border-bottom-width: 6px;
+                        border-color: $underline;
+                        margin: 0;
+                        padding-bottom: var(--padding-bottom-small);
+                        font-weight: 600;
+                        font-size: var(--font-size-xlarge);
+                        width: 289px;
+                    }
+
+                    h2 {
+                        margin: 0 0 9px;
+                        font-weight: 600;
+                        font-size: var(--font-size-large);
+                        line-height: 29px;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-weight: 600;
+                        font-size: var(--font-size-small);
+                        line-height: 19px;
+                    }
+                }
+
+                .address {
+                    margin-top: 31px;
+                    line-height: 10px;
+                }
+
+                .languages h1 {
+                    margin-bottom: var(--padding-bottom-big);
+                }
+
+                .languages p {
+                    font-weight: 600;
+                    font-size: 20px;
+                    padding-bottom: var(--padding-bottom-small);
+                }
+
+                a {
+                    color: $main-links;
+                    text-decoration: none;
+                    font-style: var(--font-style-links);
+
+                    &:visited {
+                        color: $main-visitedLinks;
+                        font-style: var(--font-style-links);
+                    }
+                    &:hover {
+                        font-style: var(--font-style-links);
+                        font-weight: 700;
+                        text-decoration: underline;
+
+                    }
+                }
+            }
+
+            /* =======Right Side========*/
+
+            .RightSide {
+                left: 0%;                
+                padding: 58px 54px 0px 45px;
+                color: $main-text;
+                margin: 0;
+                background-color: $rs-background;
+                grid-area: RightSide;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                opacity: 0;
+                animation-name: sidebar;
+                animation-timing-function: linear;
+                animation-delay: 0.5s;
+                animation-fill-mode: forwards;
+                @include SideAnimation();
+
+                div {
+                    padding-bottom: var(--padding-bottom-big);
+                }
+
+                p {
+                    font-size: var(--font-size-small);
+                    line-height: 19px;
+                    margin: 0;
+                }
+
+                .summary p {
+                    margin: 0;
+                    font-weight: 600;
+                    font-size: var(--font-size-small);
+                    line-height: 19px;
+                }
+
+                .skills .table ul {
+                    margin: 0;
+                    display: grid;
+                    font-size: var(--font-size-small);
+                }
+
+                .experience a {
+                    color: $main-links;
+                    font-weight: 500;
+                    text-decoration: none;
+                    font-style: var(--font-style-links)
+                }
+
+                    a:hover {
+                        font-style: var(--font-style-links);
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+
+                h1 {
+                    border-bottom-style: solid;
+                    border-bottom-width: 6px;
+                    border-color: $underline;
+                    margin: 0;
+                    margin-bottom: 28px;
+                    padding-bottom: var(--padding-bottom-small);
+                    font-weight: 600;
+                    font-size: var(--font-size-xlarge);
+                }
+
+                .we1, .we2, .we3 {
+                    opacity: 70%;
+                    transition: opacity 0.5s;
+
+                    &:hover {
+                        opacity: 100%;
+
+                        @keyframes workexp {
+                            0% {
+                                opacity: 70%;
+                            }
+
+                            100% {
+                                opacity: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-base);
+    font-style: normal;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+@include Theme("my",
+    my.$ls-background,
+    my.$rs-background,
+    my.$full-background,
+    my.$underline,
+    my.$main-text,
+    my.$main-name,
+    my.$main-lastname,
+    my.$main-links,
+    my.$main-visitedLinks,
+    my.$background-color);
+@include Theme("main",
+    main.$ls-background,
+    main.$rs-background,
+    main.$full-background,
+    main.$underline,
+    main.$main-text,
+    main.$main-name,
+    main.$main-lastname,
+    main.$main-links,
+    main.$main-visitedLinks,
+    main.$background-color);

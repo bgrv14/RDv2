@@ -38,13 +38,13 @@ html:has(.main-theme) {
 
   /* colors */
   --color-ls-background: #86a3b4;
+  --color-rs-background: #eeeeee;
   --color-underline: #1e1e1e;
   --color-main-text: #263036;
   --color-main-name: #ffffff;
   --color-main-lastname: #1c2e8c;
   --color-main-links: #1c2e8c;
   --color-main-visitedLinks: #005;
-  --color-rs-background: #eeeeee;
 }
 
 /*======= Left Side =======*/
