@@ -1,71 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hire me</title>
-    <link rel="stylesheet" href="styleHM.css" />
-    <h1>Запропонувати роботу</h1>
+    <title>Запропонувати роботу</title>
+    <link
+      href="https://unpkg.com/tailwindcss@2.1.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <h2>Контактна інформація</h2>
+  <body class="bg-blue-50">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold text-center mb-8">Запропонувати роботу</h1>
 
-    <div class="contacts">
-      <div class="phoneHead">Мобільний телефон</div>
-      <div class="phoneNumber">+380676338323</div>
-      <div class="addressHead">Адреса</div>
-      <div class="address">м. Кривий Ріг</div>
-    </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="bg-blue-100 rounded-lg shadow-md p-4 text-center">
+          <h2 class="text-xl font-semibold mb-2">Мобільний телефон</h2>
+          <p>+380676338323</p>
+        </div>
+        <div class="bg-blue-100 rounded-lg shadow-md p-4 text-center">
+          <h2 class="text-xl font-semibold mb-2">Адреса</h2>
+          <p>м. Кривий Ріг</p>
+        </div>
+      </div>
 
-    <br />
+      <form class="bg-blue-100 rounded-lg shadow-md p-8 text-center">
+        <fieldset>
+          <legend class="text-xl font-semibold mb-4">Контактна форма</legend>
 
-    <fieldset>
-      <form class="fullForm">
-        <div class="form">
-          <div><legend>Контактна форма</legend></div>
-          <div>
-            <label for="email">E-Mail:<span style="color: red">*</span></label>
-          </div>
-          <div>
+          <div class="mb-4">
+            <label for="email" class="block font-semibold mb-2"
+              >E-Mail:<span class="text-red-500">*</span></label
+            >
             <input
               required
               id="email"
               type="email"
               name="email"
               placeholder="example@e-mail.com"
+              class="border-blue-200 rounded-md p-2 w-full"
             />
           </div>
-          <div>
-            <label for="description">Опис:</label>
-          </div>
-          <div>
+
+          <div class="mb-4">
+            <label for="description" class="block font-semibold mb-2"
+              >Опис:</label
+            >
             <textarea
               id="description"
               name="desription"
               rows="5"
               cols="22"
-              minlength="10"
               maxlength="220"
               placeholder="Введіть текст"
+              class="border-blue-200 rounded-md p-2 w-full"
+            ></textarea>
+          </div>
+
+          <div class="mb-4">
+            <label for="workType" class="block font-semibold mb-2"
+              >Тип роботи:</label
             >
-            </textarea>
-          </div>
-          <div>
-            <label>Тип роботи:</label>
-          </div>
-          <div>
-            <select name="worktype">
-              Тип роботи: >
-              <option value="Type1">Робота в офісі</option>
-              <option value="Type2">Віддалена робота</option>
-              <option value="Type3">Разовий проєкт</option>
+            <select class="border-blue-200 rounded-md p-2 w-full">
+              <option value="1">Робота в офісі</option>
+              <option value="2">Віддалена робота</option>
+              <option value="3">Разовий проєкт</option>
             </select>
           </div>
-          <div>
-            <input type="submit" value="Найняти мене" />
+
+          <div class="text-center">
+            <input
+              type="submit"
+              value="Найняти мене"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full cursor-pointer"
+            />
           </div>
-        </div>
+        </fieldset>
       </form>
-    </fieldset>
+    </div>
   </body>
 </html>
+
+<style type="text/css">
+  html {
+    font-family: Trebuchet MS, sans-serif;
+    color: #3B4256;
+  }
+</style>
