@@ -51,7 +51,7 @@
         .full {
             display: grid;
             height: 100vh;
-        grid-template-columns: 40vh 42vw;
+            grid-template-columns: 40vh 42vw;
             grid-template-rows: 174vh;
             grid-template-areas: "LeftSide RightSide";
             justify-content: center;
