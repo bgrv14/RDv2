@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --padding-bottom-big: 36px;
   --padding-bottom-small: 13px;
@@ -193,7 +192,6 @@ html {
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  /* Літера для навігації */
 }
 @keyframes sidebar {
   0% {
@@ -222,18 +220,13 @@ html {
 }
 .my-theme .full .RightSide .nav-key {
   position: absolute;
-  /* Абсолютне позиціювання щодо секції */
-  left: 0;
-  /* Розташування літери на лівому краю секції */
-  top: 8px;
-  /* Центруємо по вертикалі */
-  /* Вирівнюємо по центру заголовка */
-  padding: 5px 10px;
-  /* Відступи всередині літери */
-  font-size: 14px;
+  left: -10px;
+  top: 3px;
+  padding: 10px 15px;
+  font-size: 25px;
   font-weight: bold;
   color: white;
-  background-color: black;
+  background-color: #2C2C34;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -455,7 +448,6 @@ html {
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  /* Літера для навігації */
 }
 @keyframes sidebar {
   0% {
@@ -484,18 +476,13 @@ html {
 }
 .main-theme .full .RightSide .nav-key {
   position: absolute;
-  /* Абсолютне позиціювання щодо секції */
-  left: 0;
-  /* Розташування літери на лівому краю секції */
-  top: 8px;
-  /* Центруємо по вертикалі */
-  /* Вирівнюємо по центру заголовка */
-  padding: 5px 10px;
-  /* Відступи всередині літери */
-  font-size: 14px;
+  left: -10px;
+  top: 3px;
+  padding: 10px 15px;
+  font-size: 25px;
   font-weight: bold;
   color: white;
-  background-color: black;
+  background-color: #86A3B4;
   border-radius: 5px;
   cursor: pointer;
 }

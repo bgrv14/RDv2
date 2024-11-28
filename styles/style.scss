@@ -240,22 +240,16 @@
                     padding-left: 40px;
                 }
 
-                /* Літера для навігації */
+                
                 .nav-key {
-                    position: absolute;
-                    /* Абсолютне позиціювання щодо секції */
-                    left: 0;
-                    /* Розташування літери на лівому краю секції */
-                    top: 8px;
-                    /* Центруємо по вертикалі */
-                    // transform: translateY(-60%);
-                    /* Вирівнюємо по центру заголовка */
-                    padding: 5px 10px;
-                    /* Відступи всередині літери */
-                    font-size: 14px;
+                    position: absolute;                    
+                    left: -10px;
+                    top: 3px;
+                    padding: 10px 15px;
+                    font-size: 25px;
                     font-weight: bold;
                     color: white;
-                    background-color: black;
+                    background-color: $ls-background;
                     border-radius: 5px;
                     cursor: pointer;
                 }
