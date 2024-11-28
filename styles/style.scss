@@ -91,12 +91,13 @@
                     padding-bottom: 50px;                    
                     transition: all 0.2s ease-in 0s;
 
-                    &:hover {
-                        width: 672px;
-                        height: 510px;
-                        padding-bottom: 0;
-                        box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.8);
-                        
+                    &.photo-enlarged {
+                            width: 672px;
+                            height: 510px;
+                            padding-bottom: 0;
+                            box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.8);
+                        }
+                    }
 
                         @media screen and (max-width: 382px) {
                             width: 385px;
@@ -117,8 +118,7 @@
                                 width: 672px;
                                 height: 510px;
                             }
-                        }
-                    }
+                        
                 }
 
                 .name {
@@ -231,6 +231,33 @@
                     font-size: var(--font-size-small);
                     line-height: 19px;
                     margin: 0;
+                }
+                .summary,
+                .skills,
+                .experience,
+                .education {
+                    position: relative;
+                    padding-left: 40px;
+                }
+
+                /* Літера для навігації */
+                .nav-key {
+                    position: absolute;
+                    /* Абсолютне позиціювання щодо секції */
+                    left: 0;
+                    /* Розташування літери на лівому краю секції */
+                    top: 8px;
+                    /* Центруємо по вертикалі */
+                    // transform: translateY(-60%);
+                    /* Вирівнюємо по центру заголовка */
+                    padding: 5px 10px;
+                    /* Відступи всередині літери */
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: white;
+                    background-color: black;
+                    border-radius: 5px;
+                    cursor: pointer;
                 }
 
                 .summary p {
