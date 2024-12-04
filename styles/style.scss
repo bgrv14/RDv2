@@ -235,7 +235,8 @@
                 .summary,
                 .skills,
                 .experience,
-                .education {
+                .education, 
+                .myprojects {
                     position: relative;
                     padding-left: 40px;
                 }
@@ -266,7 +267,7 @@
                     display: grid;
                     font-size: var(--font-size-small);
                 }
-
+                
                 .experience a {
                     color: $main-links;
                     font-weight: 500;
@@ -307,6 +308,27 @@
                                 opacity: 100%;
                             }
                         }
+                    }
+                }
+                #projects li {
+                    padding-bottom: 15px;
+                    }
+
+                #projects a {
+                    color: $main-links;
+                    text-decoration: none;
+                    font-size: 20px;
+
+                    &:visited {
+                        color: $main-visitedLinks;
+                        font-style: var(--font-style-links);
+                    }
+
+                    &:hover {
+                        font-style: var(--font-style-links);
+                        font-weight: 700;
+                        text-decoration: underline;
+
                     }
                 }
             }

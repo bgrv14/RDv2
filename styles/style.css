@@ -214,7 +214,8 @@ html {
 .my-theme .full .RightSide .summary,
 .my-theme .full .RightSide .skills,
 .my-theme .full .RightSide .experience,
-.my-theme .full .RightSide .education {
+.my-theme .full .RightSide .education,
+.my-theme .full .RightSide .myprojects {
   position: relative;
   padding-left: 40px;
 }
@@ -276,6 +277,23 @@ html {
   100% {
     opacity: 100%;
   }
+}
+.my-theme .full .RightSide #projects li {
+  padding-bottom: 15px;
+}
+.my-theme .full .RightSide #projects a {
+  color: #1B98E0;
+  text-decoration: none;
+  font-size: 20px;
+}
+.my-theme .full .RightSide #projects a:visited {
+  color: #006494;
+  font-style: var(--font-style-links);
+}
+.my-theme .full .RightSide #projects a:hover {
+  font-style: var(--font-style-links);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .main-theme {
@@ -470,7 +488,8 @@ html {
 .main-theme .full .RightSide .summary,
 .main-theme .full .RightSide .skills,
 .main-theme .full .RightSide .experience,
-.main-theme .full .RightSide .education {
+.main-theme .full .RightSide .education,
+.main-theme .full .RightSide .myprojects {
   position: relative;
   padding-left: 40px;
 }
@@ -532,4 +551,21 @@ html {
   100% {
     opacity: 100%;
   }
+}
+.main-theme .full .RightSide #projects li {
+  padding-bottom: 15px;
+}
+.main-theme .full .RightSide #projects a {
+  color: #1c2e8c;
+  text-decoration: none;
+  font-size: 20px;
+}
+.main-theme .full .RightSide #projects a:visited {
+  color: #005;
+  font-style: var(--font-style-links);
+}
+.main-theme .full .RightSide #projects a:hover {
+  font-style: var(--font-style-links);
+  font-weight: 700;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
