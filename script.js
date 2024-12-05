@@ -27,30 +27,59 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Виконуємо запит до GitHub API для отримання репозиторіїв
-  fetch("https://api.github.com/users/bgrv14/repos")
-    .then((response) => response.json()) // Парсимо відповідь як JSON
-    .then((repos) => {
-      const projectsContainer = document.getElementById("projects");
+class GitHubAPI {
+  constructor(token, username) {
+    this.token = token; // Зберігаємо токен
+    this.username = username; // Зберігаємо ім'я користувача
+    this.baseURL = "https://api.github.com"; // Базовий URL API GitHub
+  }
 
-      // Перебираємо всі репозиторії і додаємо їх на сторінку
-      repos.forEach((repo) => {
-        // const repoElement = document.createElement("div");
-        const repoElement = document.createElement("li");
-        const repoLink = document.createElement("a");
-        repoLink.href = repo.html_url; // Адреса репозиторію
-        repoLink.textContent = repo.full_name; // Назва репозиторію
-
-        const descriptionElement = document.createElement("p");
-        if (repo.description) {
-          descriptionElement.textContent = repo.description; // Опис, якщо є
+  async getRepos() {
+    try {
+      const response = await fetch(
+        `${this.baseURL}/users/${this.username}/repos`,
+        {
+          headers: {
+            Authorization: `token ${this.token}`, // Додаємо токен до заголовків
+          },
         }
+      );
 
-        repoElement.appendChild(repoLink);
-        repoElement.appendChild(descriptionElement);
-        projectsContainer.appendChild(repoElement);
-      });
-    })
-    .catch((error) => console.log("Error fetching data:", error)); // Логування помилoк
+      if (!response.ok) {
+        throw new Error(`HTTP Error: ${response.status}`); // Обробка помилок
+      }
+
+      return await response.json(); // Парсимо результат у JSON
+    } catch (error) {
+      console.error("Error fetching repositories:", error); // Лог помилок
+      return []; // Повертаємо пустий масив у разі помилки
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+  const token = "__";
+  const username = "bgrv14";
+
+  const gitHubAPI = new GitHubAPI(token, username); // Створюємо екземпляр класу
+
+  const repos = await gitHubAPI.getRepos(); // Отримуємо список репозиторіїв
+  const projectsContainer = document.getElementById("projects");
+
+  // Додаємо репозиторії на сторінку
+  repos.forEach((repo) => {
+    const repoElement = document.createElement("li");
+    const repoLink = document.createElement("a");
+    repoLink.href = repo.html_url; // Адреса репозиторію
+    repoLink.textContent = repo.full_name; // Назва репозиторію
+
+    const descriptionElement = document.createElement("p");
+    if (repo.description) {
+      descriptionElement.textContent = repo.description; // Опис, якщо є
+    }
+
+    repoElement.appendChild(repoLink);
+    repoElement.appendChild(descriptionElement);
+    projectsContainer.appendChild(repoElement);
+  });
 });
