@@ -58,7 +58,7 @@ class GitHubAPI {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const token = "__"; // Ввести токен замість __
+  const token = "___"; // Ввести токен замість ___
   const username = "bgrv14";
 
   const gitHubAPI = new GitHubAPI(token, username); // Створюємо екземпляр класу
