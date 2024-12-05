@@ -52,5 +52,5 @@ document.addEventListener("DOMContentLoaded", function () {
         projectsContainer.appendChild(repoElement);
       });
     })
-    .catch((error) => console.log("Error fetching data:", error)); // Логування помилок
+    .catch((error) => console.log("Error fetching data:", error)); // Логування помилoк
 });
